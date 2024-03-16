@@ -11,7 +11,7 @@ gap = floor(kernel_size/2);
 for i=1+gap:R-gap
     for j=1+gap:C-gap
         area = img(i-gap:i+gap, j-gap:j+gap);
-        out = area * filter;
+        out = area.* filter;
         out = sum(sum(out));
         output(i, j) = out;
     end
